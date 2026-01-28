@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligent Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Intelligent Registration System</h1>
+
+<div class="form-container">
+    <div id="formError" class="form-error"></div>
+
+    <form id="registrationForm">
+
+        <div class="section-title">Personal Information</div>
+
+        <div class="form-grid">
+            <div>
+                <label>First Name *</label>
+                <input type="text" id="firstName">
+                <small class="error" id="firstNameError"></small>
+            </div>
+
+            <div>
+                <label>Last Name *</label>
+                <input type="text" id="lastName">
+                <small class="error" id="lastNameError"></small>
+            </div>
+
+            <div>
+                <label>Email *</label>
+                <input type="email" id="email">
+                <small class="error" id="emailError"></small>
+            </div>
+
+            <div>
+                <label>Phone *</label>
+                <input type="text" id="phone">
+                <small class="error" id="phoneError"></small>
+            </div>
+
+            <div>
+                <label>Gender *</label>
+                <div class="gender-group">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                </div>
+                <small class="error" id="genderError"></small>
+            </div>
+        </div>
+
+        <div class="section-title">Location</div>
+
+        <div class="form-grid">
+            <div>
+                <label>Country</label>
+                <select id="country">
+                    <option value="">Select</option>
+                    <option value="India">India</option>
+                </select>
+            </div>
+
+            <div>
+                <label>State</label>
+                <select id="state" disabled>
+                    <option value="">Select</option>
+                </select>
+            </div>
+
+            <div>
+                <label>City</label>
+                <select id="city" disabled>
+                    <option value="">Select</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section-title">Security</div>
+
+        <div class="form-grid">
+            <div>
+                <label>Password *</label>
+                <input type="password" id="password">
+                <small id="passwordStrength"></small>
+            </div>
+
+            <div>
+                <label>Confirm Password *</label>
+                <input type="password" id="confirmPassword">
+                <small class="error" id="confirmPasswordError"></small>
+            </div>
+        </div>
+
+        <div class="terms-inline">
+            <input type="checkbox" id="terms">
+            <span>I agree to Terms & Conditions</span>
+        </div>
+        <small class="error" id="termsError"></small>
+
+        <br>
+        <br>
+        <button type="submit" id="submitBtn">Register</button>
+
+    </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
